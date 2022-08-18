@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
@@ -14,7 +17,7 @@ class LanguageBloc extends Bloc<LanguageEvent, LanguageState> {
     on<ChangeLanguageEvent>(
       (event, emit) async {
         final languageCode = event.languageCode;
-        await _languageFacade.setLanguageCode(languageCode);
+        _languageFacade.setLanguageCode(languageCode);
         emit(
           LanguageState(
             isLoading: false,
@@ -30,11 +33,17 @@ class LanguageBloc extends Bloc<LanguageEvent, LanguageState> {
             isLoading: true,
           ),
         );
-        final languageCode = await _languageFacade.getLanguageCode();
+        var languageCode = await _languageFacade.getLanguageCode();
+
+        if (languageCode == null) {
+          languageCode = Platform.localeName.substring(1, 3);
+          _languageFacade.setLanguageCode(languageCode);
+        }
+
         emit(
           LanguageState(
             isLoading: false,
-            locale: languageCode != null ? Locale(languageCode) : null,
+            locale: Locale(languageCode),
           ),
         );
       },

@@ -1,7 +1,7 @@
 part of 'language_bloc.dart';
 
 @immutable
-class LanguageState {
+class LanguageState extends Equatable {
   const LanguageState({
     required this.isLoading,
     this.locale,
@@ -11,4 +11,10 @@ class LanguageState {
   final bool isLoading;
 
   factory LanguageState.initial() => const LanguageState(isLoading: true);
+
+  @override
+  List<Object?> get props => [
+        locale,
+        isLoading,
+      ];
 }
