@@ -1,14 +1,14 @@
 import 'package:injectable/injectable.dart';
-import 'package:navigation_exercise/i_language_facade.dart';
+import 'package:navigation_exercise/i_language_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SPKeys {
   static const langKey = 'lang_key';
 }
 
-@Injectable(as: ILanguageFacade)
-class LanguageFacade implements ILanguageFacade {
-  const LanguageFacade(this._sp);
+@Injectable(as: ILanguageService)
+class LanguageService implements ILanguageService {
+  const LanguageService(this._sp);
 
   final SharedPreferences _sp;
 
