@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:navigation_exercise/application/language_bloc/language_bloc.dart';
-import 'package:navigation_exercise/build_context_ext.dart';
-import 'package:navigation_exercise/custom_drawer.dart';
+import 'package:navigation_exercise/util/build_context_ext.dart';
+import 'package:navigation_exercise/presentation/common/custom_drawer.dart';
 
 class CustomScaffold extends StatelessWidget {
   const CustomScaffold({

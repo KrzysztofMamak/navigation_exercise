@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_exercise/build_context_ext.dart';
-import 'package:navigation_exercise/custom_scaffold.dart';
+import 'package:navigation_exercise/util/build_context_ext.dart';
+import 'package:navigation_exercise/presentation/common/custom_scaffold.dart';
 
 class FourthPage extends StatelessWidget {
   const FourthPage({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_exercise/build_context_ext.dart';
-import 'package:navigation_exercise/navigation.dart';
+import 'package:navigation_exercise/util/build_context_ext.dart';
+import 'package:navigation_exercise/presentation/navigation/navigation.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({
