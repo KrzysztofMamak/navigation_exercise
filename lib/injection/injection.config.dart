@@ -10,8 +10,8 @@ import 'package:injectable/injectable.dart' as _i2;
 import 'package:shared_preferences/shared_preferences.dart' as _i3;
 
 import '../application/language_bloc/language_bloc.dart' as _i6;
-import '../i_language_service.dart' as _i4;
-import '../language_service.dart' as _i5;
+import '../domain/i_language_service.dart' as _i4;
+import '../infrastructure/language_service.dart' as _i5;
 import 'module/shared_preferences_module.dart'
     as _i7; // ignore_for_file: unnecessary_lambdas
 

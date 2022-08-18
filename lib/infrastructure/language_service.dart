@@ -1,5 +1,5 @@
 import 'package:injectable/injectable.dart';
-import 'package:navigation_exercise/i_language_service.dart';
+import 'package:navigation_exercise/domain/i_language_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SPKeys {
