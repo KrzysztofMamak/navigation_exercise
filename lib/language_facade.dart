@@ -13,12 +13,12 @@ class LanguageFacade implements ILanguageFacade {
   final SharedPreferences _sp;
 
   @override
-  Future<String?> getLanguage() async {
+  Future<String?> getLanguageCode() async {
     return _sp.getString(SPKeys.langKey);
   }
 
   @override
-  Future<bool> setLanguage(String languageCode) async {
+  Future<bool> setLanguageCode(String languageCode) async {
     return _sp.setString(SPKeys.langKey, languageCode);
   }
 }

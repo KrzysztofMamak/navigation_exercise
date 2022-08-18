@@ -1,5 +1,5 @@
 abstract class ILanguageFacade {
-  Future<String?> getLanguage();
+  Future<String?> getLanguageCode();
 
-  Future<bool> setLanguage(String languageCode);
+  Future<bool> setLanguageCode(String languageCode);
 }
